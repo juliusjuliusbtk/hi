@@ -1,0 +1,220 @@
+/* === GLOBAL === */
+
+html, body{
+    height: 100%;
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+}
+
+/* === NAVIGATIONSLEISTE === */
+#headernav {
+    background-color: cadetblue;
+    height: 50px;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+/* === HEADER-BANNER === */
+.banner{
+    background-color: orange;
+    width: 100%;
+    padding-top: 25%;
+}
+#header-nav ul{
+    text-align: center;
+    padding: 0 0 2rem;
+}
+
+#header-nav ul > li {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+#header-nav ul > li > a:link{
+    color: white;
+    text-decoration: none;
+}
+#header-nav ul > li > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#header-nav ul > li > a:hover{
+    color: rgb(255, 224, 167)
+}
+
+#header-nav ul > li > a:active {
+    color: red;
+    text-decoration: none;
+}
+#banner-hello{
+
+    /* bitte url anpassen, falls du den IMG Ordner umbenennst*/
+    background:url("../img 2/banner-hello.jpg") no-repeat;
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* === ABOUT-BEREICH === */
+
+#aboutbereich{
+
+}
+
+/* === INTRO === */
+.intro-box{
+    /*background-color: aquamarine;*/
+    text-align: center;
+    margin: 1.6rem;
+    padding: 3rem
+}
+
+.intro-box > h1 {
+    font-size: 2rem;
+    color: indigo;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+    
+}
+
+.intro-box > p {
+    font-size: 1.2rem;
+}
+
+img.circle {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+img.nocircle {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* === HOBBYS-BEREICH === */
+#hobbys-bereich{
+    background-color: indigo;
+    width: 100%;
+    padding-bottom: 2rem;
+    display: inline-block;
+}
+
+.hobbys-box-text {
+    background-color: white;
+    border: 2px solid black;
+    margin: 1.6rem;
+    padding: 1rem 3rem 2.5rem;
+}
+
+#hobbys-bereich .intro-box > h1 {
+    color: white;
+}
+
+#hobbys-bereich .intro-box > p {
+    color: white;
+}
+
+.hobbys-box-img {
+    margin: 1.6rem;
+}
+
+.hobbys-box-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* === FOOTER === */
+#footer{
+    text-align: center;
+}
+
+
+/* === GRID-SYSTEM === */
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.row {
+    display: block;
+    clear: both;
+}
+
+.col-100 {
+    width: 100%;
+    float: left;
+}
+
+.col-50 {
+    width: 50%;
+    float: left;
+}
+
+.col-33{
+    width: 33.333333333%;
+    float: left;
+}
+
+
+@media (max-width: 1024px)
+{
+    .container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;    
+    }
+}
+#kontakt-bereich{
+    background-color: orangered;
+    width: 100%;
+    display: inline-block;
+}
+#kontakt-bereich label {
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+#kontakt-bereich input,
+#kontaktbereich textarea{
+    width: 100%;
+    border: 2px solid black;
+    padding: .5rem;
+    margin: .5rem 0;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+}
+#sendenButton {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Tahoma, sans-serif;
+    font-size: 1rem;
+    width: 200px;
+    height: 40px;
+    border: 2px solid blue;
+}
+
+@media (max-width: 720px)
+{
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;    
+    }
+
+    .col-50 {
+        width: 100%;
+        float: left;
+    }
+}
+
