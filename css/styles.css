@@ -11,19 +11,22 @@ body {
 }
 
 /* === NAVIGATIONSLEISTE === */
-#headernav {
+#header-nav {
     background-color: cadetblue;
     height: 50px;
     font-family: 'Roboto Condensed', Tahoma, sans-serif;
     text-transform: uppercase;
+    font-size: 1.1rem;
+
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 99;
 }
 
-/* === HEADER-BANNER === */
-.banner{
-    background-color: orange;
-    width: 100%;
-    padding-top: 25%;
-}
+
+
+
 #header-nav ul{
     text-align: center;
     padding: 0 0 2rem;
@@ -32,6 +35,13 @@ body {
 #header-nav ul > li {
     display: inline-block;
     padding: 0 0.5rem;
+
+    transition:all 0.2s ease-in-out;
+}
+
+#header-nav ul > li:hover {
+    padding: 0 0.75rem;
+    transform: scale(1.2);
 }
 #header-nav ul > li > a:link{
     color: white;
@@ -50,10 +60,17 @@ body {
     color: red;
     text-decoration: none;
 }
+
+/* === HEADER-BANNER === */
+.banner{
+    background-color: orange;
+    width: 100%;
+    padding-top: 25%;
+}
 #banner-hello{
 
     /* bitte url anpassen, falls du den IMG Ordner umbenennst*/
-    background:url("../img 2/banner-hello.jpg") no-repeat;
+    background:url("img/banner-hello.jpg") no-repeat;
 
     background-size: cover;
     background-position: center;
@@ -180,6 +197,12 @@ img.nocircle {
     background-color: orangered;
     width: 100%;
     display: inline-block;
+    padding-bottom: 3rem;
+}
+
+#kontakt-bereich > .container{
+    width: 50%;
+    text-align:center;
 }
 #kontakt-bereich label {
     font-size: 1rem;
@@ -202,7 +225,18 @@ img.nocircle {
     width: 200px;
     height: 40px;
     border: 2px solid blue;
+    background-color: aquamarine;
+    transition: all 0.25s ease-out 100ms;
 }
+
+#sendenButton:hover{
+    border: 3px solid orange;
+    background-color: crimson;
+    color: white;
+    transform: scale(1.2); 
+}
+
+senden 
 
 @media (max-width: 720px)
 {
@@ -218,3 +252,90 @@ img.nocircle {
     }
 }
 
+
+/*===Animation===*/
+
+@keyframes colorchange {
+    0%{background-color: aquamarine;}
+    50%{background-color: cadetblue;}
+    100% {background-color: blue;}
+}
+
+.colorchange {
+    animation: colorchange;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
+  .scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
